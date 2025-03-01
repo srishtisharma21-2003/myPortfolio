@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRISHTI SHARMA - DEVELOPER PORTFOLIO</title>
+    <style>
+        /* Resetting margins and paddings for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the body with a dark theme */
+        body {
+            background-color: rgb(3, 3, 83);
+            color: aliceblue;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            padding: 0 20px;
+        }
+
+        /* Styling the navigation links */
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        nav ul li a:hover {
+            color: rgb(128, 11, 98);
+            font-size: 1.04rem; /* Subtle hover effect */
+        }
+
+        /* Left-side branding in the navigation */
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* First section: Introduction */
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 10%;
+            margin: 130px 0;
+        }
+
+        /* Left section: Introduction text */
+        .leftSection {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Highlight specific text with purple color */
+        .purple {
+            color: rgb(128, 11, 98);
+        }
+
+        /* Right section: Developer image */
+        .rightSection img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Styling the buttons */
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth hover effect */
+        }
+        .buttons button:hover {
+            transform: scale(1.1);
+            background-color: rgb(128, 11, 98);
+            color: aliceblue;
+        }
+
+        /* Separate styles for CV and GitHub buttons */
+        .cv-button {
+            background-color: rgb(18, 18, 62);
+            color: aliceblue;
+        }
+        .github-button {
+            background-color: rgb(128, 11, 98);
+            color: aliceblue;
+        }
+
+        /* Second section: Work experience */
+        .secondSection {
+            max-width: 80vw;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        /* Styling the Work Experience title */
+        .secondSection h1 {
+            margin-top: 20px;
+            font-size: 1.9rem;
+            position: relative;
+        }
+        .secondSection h1::before {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: aliceblue;
+            margin: 0 auto 10px; /* Line under the heading */
+        }
+
+        /* Gray-colored subtext */
+        .text-gray {
+            color: gray;
+        }
+
+        /* Timeline section for work experience */
+        .timeline {
+            position: relative;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 800px;
+            padding-left: 20px;
+        }
+
+        /* Vertical timeline line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 4px;
+            height: 100%;
+            background-color: aliceblue;
+        }
+
+        /* Individual timeline item */
+        .timeline-item {
+            margin: 20px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        /* Icons for timeline */
+        .timeline-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        /* Circular marker for timeline items */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 36px;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            background-color: rgb(128, 11, 98);
+            border-radius: 50%;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Contact information in the footer */
+        footer .contact {
+            margin-bottom: 20px;
+        }
+
+        /* Social media links in the footer */
+        footer .social-links a {
+            color: aliceblue;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        footer .social-links a:hover {
+            color: rgb(128, 11, 98); /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <div class="left">SRISHTI PORTFOLIO</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- First section: Introduction -->
+        <section class="firstSection">
+            <div class="leftSection">
+                Hello, my name is <span class="purple">Srishti Sharma</span>.
+                <div>I am a passionate web developer.</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="cv-button">Download CV</button>
+                    <button class="github-button">GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bng.png" alt="developer">
+            </div>
+        </section>
+
+        <!-- Second section: Work experience -->
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="timeline">
+                <!-- Individual timeline items -->
+                <div class="timeline-item">
+                    <img src="html.png" alt="HTML Developer">
+                    <h3>HTML Developer (2022-2023)</h3>
+                    <p>Created engaging web pages and layouts using HTML5.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="nodejs.png" alt="Node.js Developer">
+                    <h3>Node.js Developer (2023-2024)</h3>
+                    <p>Developed server-side applications using Node.js and Express.js.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="frontend.png" alt="Frontend Developer">
+                    <h3>Frontend Developer (2023-2024)</h3>
+                    <p>Built interactive user interfaces using React.js.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="fs.png" alt="Full Stack Developer">
+                    <h3>Full Stack Developer (2024-2025)</h3>
+                    <p>Worked on end-to-end web development using MERN stack.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="sql.png" alt="SQL Developer">
+                    <h3>SQL Database Developer (2024-2025)</h3>
+                    <p>Designed and optimized database schemas, wrote advanced SQL queries, and managed database systems.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="c-program-icon.png" alt="C Developer">
+                    <h3>C Developer</h3>
+                    <p>Developed efficient algorithms and performed low-level system programming.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="c++.png" alt="C++ Developer">
+                    <h3>C++ Developer</h3>
+                    <p>Implemented object-oriented programming concepts for software development.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="java-logo-1.png" alt="Java Developer">
+                    <h3>Java Developer</h3>
+                    <p>Built robust and scalable applications using Java and Spring Framework.</p>
+                </div>
+                <div class="timeline-item">
+                    <img src="python.png" alt="Python Developer">
+                    <h3>Python Developer</h3>
+                    <p>Worked on data analysis, machine learning models, and web development using Django.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="contact">
+            <p><strong>Contact Me:</strong> srishtisharma212003@gmail.com | +91-8580895706</p>
+        </div>
+        <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+        <p>© 2025 Srishti Sharma. All rights reserved. | Designed with passion and code.</p>
+    </footer>
+
+    <!-- Typed.js for dynamic text animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Video Editor'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+</html>
